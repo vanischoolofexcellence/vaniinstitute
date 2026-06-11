@@ -9,3 +9,4 @@ pydantic
 pydantic[email]
 python-multipart
 email-validator
+slowapi

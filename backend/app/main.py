@@ -91,8 +91,8 @@ async def lifespan(app: FastAPI):
 app = FastAPI(
     lifespan=lifespan,
 
-    docs_url="/docs",
-    redoc_url="/redoc",
+    docs_url=None,
+    redoc_url=None,
 
     title=
     "Vani Institute Management API",

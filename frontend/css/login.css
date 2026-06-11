@@ -1,0 +1,30 @@
+.login-container{
+
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+
+    width:400px;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    box-shadow:0 0 40px rgba(124,58,237,0.3);
+}
+
+.login-card h1{
+    margin-bottom:30px;
+    text-align:center;
+}

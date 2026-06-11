@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Students
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        VANI ADMIN
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="classes.html">
+            Manage Classes
+        </a>
+
+        <a href="students.html">
+            Students
+        </a>
+
+        <a href="add-student.html">
+            Add Student
+        </a>
+
+        <a href="messages.html">
+            Messages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a
+            href="login.html"
+            onclick="logout()"
+        >
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<div class="main-content">
+
+    <div class="dashboard-header">
+
+        
+
+    </div>
+
+    <br>
+    <div class="dashboard-header">
+        <div>
+            <h1>
+                Students
+            </h1>
+            <p>
+                Manage All Students
+            </p>
+        </div>
+        <button
+            class="present-btn"
+            onclick="
+                window.location.href=
+                'add-student.html'
+            "
+        >
+            + Add Student
+        </button>
+    </div>
+
+    <br>
+
+    <div class="card">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Student..."
+            onkeyup="loadStudents()"
+        >
+
+    </div>
+
+    <div
+        id="studentsContainer"
+    >
+
+    </div>
+
+</div>
+
+<!-- MOBILE BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+    <a href="dashboard.html">
+        📊
+        <span>Home</span>
+    </a>
+
+    <a href="classes.html">
+        📚
+        <span>Classes</span>
+    </a>
+
+    <a href="students.html">
+        👨‍🎓
+        <span>Students</span>
+    </a>
+
+    <a href="messages.html">
+        💬
+        <span>Messages</span>
+    </a>
+
+    <a href="gallery.html">
+        🖼️
+        <span>Gallery</span>
+    </a>
+
+</div>
+
+<script src="../js/protect.js"></script>
+
+<script src="../js/api.js"></script>
+
+<script src="../js/students.js"></script>
+
+<script src="../js/logout.js"></script>
+
+</body>
+
+</html>

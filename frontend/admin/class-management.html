@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0"> 
+
+    <title>
+        Class Management
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/class-management.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        VANI ADMIN
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+        <a href="classes.html">
+            Manage classes
+        </a>
+
+        <a href="students.html">
+            Students
+        </a>
+
+        <a href="add-student.html">
+            Add Student
+        </a>
+
+        
+        
+
+        <a href="messages.html">
+            Messages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="login.html" onclick="logout()">
+            Logout
+        </a>
+
+
+    </div>
+
+</div>
+
+<div class="main-content">
+
+    <div class="top-bar">
+
+        <h1 id="classTitle">
+            Class Management
+        </h1>
+
+        <input
+            type="date"
+            id="attendanceDate"
+        >
+
+    </div>
+
+    <br>
+
+    <div class="top-options">
+
+        <button
+            class="option-btn"
+            onclick="loadStudentsMode()"
+        >
+            Students
+        </button>
+
+        <button
+            class="option-btn"
+            onclick="loadAttendanceMode()"
+        >
+            Attendance
+        </button>
+
+        <button
+            class="option-btn"
+            onclick="window.loadFeesMode()"
+        >
+            Fees
+        </button>
+
+        <button
+            class="option-btn"
+            onclick="loadMarksMode()"
+        >
+            Marks
+        </button>
+
+    </div>
+
+    <br>
+
+    <div class="card">
+        <div class="table-container">
+
+            <table class="table">
+
+                <thead>
+
+                    <tr id="tableHead">
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tableBody">
+
+                </tbody>
+
+            </table>
+            <br>
+            <button
+                id="saveAttendanceBtn"
+                class="present-btn"
+                onclick="saveAllAttendance()"
+                style="display: none;"
+            >
+                Save Attendance
+            </button>
+
+        </div>
+
+    </div>
+    <div id="mobileCards">
+        
+    </div>
+
+    <br>
+
+    <div id="extraSection">
+
+    </div>
+
+</div>
+
+<div
+    id="marksModal"
+    class="marks-modal"
+>
+
+    <div
+        class="marks-modal-content"
+    >
+
+        <div
+            class="marks-modal-top"
+        >
+
+            <h2 id="modalTitle">
+
+            </h2>
+
+            <button
+                class="close-btn"
+                onclick="closeMarksModal()"
+            >
+
+                ✖
+
+            </button>
+
+        </div>
+
+        <br>
+
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Student
+                    </th>
+
+                    <th>
+                        Marks
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody
+                id="modalMarksBody"
+            >
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="../js/protect.js"></script>
+<script src="../js/class-management.js"></script>
+
+
+<script src="../js/logout.js"></script>
+
+
+</body>
+</html>

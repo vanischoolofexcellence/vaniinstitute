@@ -1,0 +1,26 @@
+from sqlalchemy.orm import Session
+from app.models.student import Student
+
+
+def get_student_by_id(
+    db: Session,
+    student_id: int
+):
+
+    return db.query(
+        Student
+    ).filter(
+        Student.id == student_id
+    ).first()
+
+
+def get_student_by_phone(
+    db: Session,
+    phone: str
+):
+
+    return db.query(
+        Student
+    ).filter(
+        Student.phone == phone
+    ).first()

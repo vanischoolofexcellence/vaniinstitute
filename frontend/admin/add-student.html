@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1.0"> 
+<title>Add Student</title>
+
+<link rel="stylesheet" href="../css/global.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        VANI ADMIN
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+        <a href="classes.html">
+            Manage classes
+        </a>
+
+        <a href="students.html">
+            Students
+        </a>
+
+        <a href="add-student.html">
+            Add Student
+        </a>
+
+        
+        
+
+        <a href="messages.html">
+            Messages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a href="login.html" onclick="logout()">
+            Logout
+        </a>
+
+
+    </div>
+
+</div>
+
+<div class="main-content">
+
+    <div class="card">
+
+        <h1>Add Student</h1>
+
+        <br>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Student Name"
+        >
+
+        <input
+            type="text"
+            id="father_name"
+            placeholder="Father Name"
+        >
+
+        <input
+            type="text"
+            id="phone"
+            placeholder="Phone"
+        >
+
+        <input
+            type="text"
+            id="class_name"
+            placeholder="Class"
+        >
+
+        <input
+            type="text"
+            id="school_name"
+            placeholder="School Name"
+        >
+
+        <input
+            type="date"
+            id="joining_date"
+        >
+
+        <textarea
+            id="address"
+            placeholder="Address"
+        ></textarea>
+
+        <button
+            class="btn"
+            onclick="addStudent()"
+        >
+            Add Student
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MOBILE BOTTOM NAV -->
+
+<div class="bottom-nav">
+
+    <a href="dashboard.html">
+        📊
+        <span>Home</span>
+    </a>
+
+    <a href="classes.html">
+        📚
+        <span>Classes</span>
+    </a>
+
+    <a href="students.html">
+        👨‍🎓
+        <span>Students</span>
+    </a>
+
+    <a href="messages.html">
+        💬
+        <span>Messages</span>
+    </a>
+
+    <a href="gallery.html">
+        🖼️
+        <span>Gallery</span>
+    </a>
+
+</div>
+
+
+
+<script src="../js/protect.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/toast.js"></script>
+
+<script src="../js/add-student.js"></script>
+<script src="../js/logout.js"></script>
+
+
+</body>
+</html>

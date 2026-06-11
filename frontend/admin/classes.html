@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Manage Classes
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/global.css"
+    >
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <div class="logo">
+        VANI ADMIN
+    </div>
+
+    <div class="nav-links">
+
+        <a href="dashboard.html">
+            Dashboard
+        </a>
+
+        <a href="classes.html">
+            Manage Classes
+        </a>
+
+        <a href="students.html">
+            Students
+        </a>
+
+        <a href="add-student.html">
+            Add Student
+        </a>
+
+        <a href="messages.html">
+            Messages
+        </a>
+
+        <a href="gallery.html">
+            Gallery
+        </a>
+
+        <a
+            href="login.html"
+            onclick="logout()"
+        >
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+<div class="main-content">
+
+    <div class="dashboard-header">
+
+        <div>
+
+            <h1>
+                Classes
+            </h1>
+
+            <p>
+                Select A Class
+            </p>
+
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="dashboard-grid">
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('5')"
+        >
+            <h2>Class 5</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('6')"
+        >
+            <h2>Class 6</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('7')"
+        >
+            <h2>Class 7</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('8')"
+        >
+            <h2>Class 8</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('9')"
+        >
+            <h2>Class 9</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('10')"
+        >
+            <h2>Class 10</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('Inter 1st Year')"
+        >
+            <h2>Inter 1st Year</h2>
+        </div>
+
+        <div
+            class="dashboard-card"
+            onclick="openClass('Inter 2nd Year')"
+        >
+            <h2>Inter 2nd Year</h2>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="bottom-nav">
+
+    <a href="dashboard.html">
+        📊
+        <span>Home</span>
+    </a>
+
+    <a href="classes.html">
+        📚
+        <span>Classes</span>
+    </a>
+
+    <a href="students.html">
+        👨‍🎓
+        <span>Students</span>
+    </a>
+
+    <a href="messages.html">
+        💬
+        <span>Messages</span>
+    </a>
+
+    <a href="gallery.html">
+        🖼️
+        <span>Gallery</span>
+    </a>
+
+</div>
+
+<script src="../js/protect.js"></script>
+<script src="../js/classes.js"></script>
+<script src="../js/logout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1.0"> 
+<title>Attendance</title>
+
+<link rel="stylesheet" href="../css/global.css">
+
+</head>
+<body>
+
+<div class="main-content">
+
+    <div class="card">
+
+        <h1>Add Attendance</h1>
+
+        <br>
+
+        <input
+            type="number"
+            id="student_id"
+            placeholder="Student DB ID"
+        >
+
+        <input
+            type="date"
+            id="date"
+        >
+
+        <select id="time_slot">
+
+            <option value="Morning">
+                Morning
+            </option>
+
+            <option value="Evening">
+                Evening
+            </option>
+
+        </select>
+
+        <select id="status">
+
+            <option value="present">
+                Present
+            </option>
+
+            <option value="absent">
+                Absent
+            </option>
+
+        </select>
+
+        <button
+            class="btn"
+            onclick="addAttendance()"
+        >
+            Save Attendance
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="../js/protect.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/toast.js"></script>
+<script src="../js/admin-attendance.js"></script>
+<script src="../js/logout.js"></script>
+</body>
+</html>

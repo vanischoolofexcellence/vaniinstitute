@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1.0"> 
+<title>Fees</title>
+
+<link rel="stylesheet" href="../css/global.css">
+
+</head>
+<body>
+
+<div class="main-content">
+
+    <div class="card">
+
+        <h1>Add Fees</h1>
+
+        <br>
+
+        <input
+            type="number"
+            id="student_id"
+            placeholder="Student DB ID"
+        >
+
+        <input
+            type="number"
+            id="amount"
+            placeholder="Amount"
+        >
+
+        <input
+            type="text"
+            id="paid_month"
+            placeholder="Paid Month"
+        >
+
+        <input
+            type="date"
+            id="payment_date"
+        >
+
+        <select id="status">
+
+            <option value="Paid">
+                Paid
+            </option>
+
+            <option value="Pending">
+                Pending
+            </option>
+
+        </select>
+
+        <button
+            class="btn"
+            onclick="addFees()"
+        >
+            Save Fees
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/protect.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/toast.js"></script>
+<script src="../js/admin-fees.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" 
+content="width=device-width, initial-scale=1.0"> 
+<title>Add Marks</title>
+
+<link rel="stylesheet" href="../css/global.css">
+
+</head>
+<body>
+
+<div class="main-content">
+
+    <div class="card">
+
+        <h1>Add Marks</h1>
+
+        <br>
+
+        <input
+            type="number"
+            id="student_id"
+            placeholder="Student DB ID"
+        >
+
+        <input
+            type="text"
+            id="subject"
+            placeholder="Subject"
+        >
+
+        <input
+            type="number"
+            id="marks"
+            placeholder="Marks"
+        >
+
+        <input
+            type="text"
+            id="exam_type"
+            placeholder="Exam Type"
+        >
+
+        <input
+            type="date"
+            id="date"
+        >
+
+        <button
+            class="btn"
+            onclick="addMarks()"
+        >
+            Save Marks
+        </button>
+
+    </div>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/toast.js"></script>
+<script src="../js/admin-marks.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.attendance-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#attendanceSummary{
+    color: #06b6d4;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+}
+#attendanceCards{
+    display:none;
+}
+
+.mobile-card{
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(
+        255,255,255,0.1
+    );
+
+    border-radius:15px;
+
+    padding:15px;
+
+    margin-bottom:15px;
+}
+
+.mobile-card p{
+
+    margin:8px 0;
+}
+
+@media(max-width:768px){
+
+    #attendanceCards{
+        display:block;
+    }
+
+    .table-container{
+        display:none;
+    }
+}
+.search-box{
+    margin-bottom: 20px;
+}
+.search-box input{
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(
+            255,255,255,0.08
+        );
+    color: aliceblue;
+}

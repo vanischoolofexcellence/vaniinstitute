@@ -135,7 +135,11 @@ app.add_middleware(
         "*"
     ]
 )
-
+import os
+os.makedirs(
+    "uploads",
+    exist_ok=True
+)
 app.mount(
     "/uploads",
     StaticFiles(directory="uploads"),

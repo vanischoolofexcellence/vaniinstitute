@@ -2337,20 +2337,13 @@ async function saveAllMarks(
     }
 }
 
-
-
-
 async function loadPreviousExams(){
-
 
     try{
 
-
         const response = await fetch(
 
-
             `${BASE_URL}/marks/all`,
-
 
             {
                 headers:{
@@ -2360,156 +2353,199 @@ async function loadPreviousExams(){
             }
         );
 
-
         const data =
         await response.json();
 
-
         const uniqueExams = [];
-
 
         data.forEach(item => {
 
-
             const exists =
             uniqueExams.find(exam =>
-
 
                 exam.exam_name
                 ===
                 item.exam_name
 
-
                 &&
-
 
                 exam.subject
                 ===
                 item.subject
 
-
                 &&
-
 
                 exam.date
                 ===
                 item.date
             );
 
-
             if(!exists){
-
 
                 uniqueExams.push(item);
             }
         });
 
+        // MOBILE VIEW
+        if(window.innerWidth <= 768){
 
-        let html = `
+            let mobileHtml = `
 
+                <h3>
+                    Previous Exams
+                </h3>
 
-            <h3>
-                Previous Exams
-            </h3>
+                <br>
+            `;
 
+            uniqueExams.forEach(item => {
 
-            <br>
+                mobileHtml += `
 
+                    <div
 
-            <table class="table">
+                        class="student-card"
 
+                        style="
+                            cursor:pointer;
+                            margin-bottom:12px;
+                        "
 
-                <thead>
+                        onclick="
+                            loadPreviousExamMarks(
+                                '${item.exam_name}',
+                                '${item.subject}',
+                                '${item.date}'
+                            )
+                        "
+                    >
 
+                        <h3>
+                            ${item.exam_name}
+                        </h3>
 
-                    <tr>
+                        <br>
 
+                        <p>
 
-                        <th>Date</th>
+                            <b>
+                                Subject:
+                            </b>
 
+                            ${item.subject}
 
-                        <th>Exam Name</th>
+                        </p>
 
+                        <p>
 
-                        <th>Subject</th>
+                            <b>
+                                Date:
+                            </b>
 
+                            ${item.date}
+
+                        </p>
+
+                    </div>
+                `;
+            });
+
+            document.getElementById(
+                "previousExams"
+            ).innerHTML = mobileHtml;
+        }
+
+        // DESKTOP VIEW
+        else{
+
+            let html = `
+
+                <h3>
+                    Previous Exams
+                </h3>
+
+                <br>
+
+                <table class="table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Exam Name
+                            </th>
+
+                            <th>
+                                Subject
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+            `;
+
+            uniqueExams.forEach(item => {
+
+                html += `
+
+                    <tr
+
+                        style="
+                            cursor:pointer;
+                        "
+
+                        onclick="
+                            loadPreviousExamMarks(
+                                '${item.exam_name}',
+                                '${item.subject}',
+                                '${item.date}'
+                            )
+                        "
+                    >
+
+                        <td>
+                            ${item.date}
+                        </td>
+
+                        <td>
+                            ${item.exam_name}
+                        </td>
+
+                        <td>
+                            ${item.subject}
+                        </td>
 
                     </tr>
-
-
-                </thead>
-
-
-                <tbody>
-        `;
-
-
-        uniqueExams.forEach(item => {
-
+                `;
+            });
 
             html += `
 
+                    </tbody>
 
-                <tr
-
-
-                    style="
-                        cursor:pointer;
-                    "
-
-
-                    onclick="
-                        loadPreviousExamMarks(
-                            '${item.exam_name}',
-                            '${item.subject}',
-                            '${item.date}'
-                        )
-                    "
-                >
-
-
-                    <td>
-                        ${item.date}
-                    </td>
-
-
-                    <td>
-                        ${item.exam_name}
-                    </td>
-
-
-                    <td>
-                        ${item.subject}
-                    </td>
-
-
-                </tr>
+                </table>
             `;
-        });
 
-
-        html += `
-
-
-                </tbody>
-
-
-            </table>
-        `;
-
-
-        document.getElementById(
-            "previousExams"
-        ).innerHTML = html;
+            document.getElementById(
+                "previousExams"
+            ).innerHTML = html;
+        }
     }
 
-
     catch(error){
-
 
         console.log(error);
     }
 }
+
+
 
 
 async function loadPreviousExamMarks(

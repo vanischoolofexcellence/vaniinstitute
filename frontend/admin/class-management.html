@@ -177,17 +177,16 @@
             class="marks-modal-top"
         >
 
-            <h2 id="modalTitle">
-
+            <h2
+                id="modalTitle"
+            >
             </h2>
 
             <button
                 class="close-btn"
                 onclick="closeMarksModal()"
             >
-
                 ✖
-
             </button>
 
         </div>
@@ -195,8 +194,36 @@
         <br>
 
         <div
-            id="modalMarksBody"
+            class="table-container"
         >
+
+            <table
+                class="table"
+            >
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Student Name
+                        </th>
+
+                        <th>
+                            Marks
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody
+                    id="modalMarksBody"
+                >
+
+                </tbody>
+
+            </table>
 
         </div>
 

@@ -154,7 +154,9 @@
 
     background:#111827;
 
-    width:70%;
+    width:90%;
+
+    max-width: 700px;
 
     max-height:80vh;
 
@@ -162,7 +164,13 @@
 
     border-radius:18px;
 
-    padding:30px;
+    padding:20px;
+}
+
+.marks-modal-content .table{
+    width: 100%;
+
+    min-width: 300px;
 }
 
 .marks-modal-top{

@@ -2418,6 +2418,10 @@ async function loadPreviousExams(){
                                 '${item.date}'
                             )
                         "
+                        style="
+                            cursor:pointer;
+                        "
+
                     >
 
                         <h3>
@@ -2453,6 +2457,8 @@ async function loadPreviousExams(){
             document.getElementById(
                 "previousExams"
             ).innerHTML = mobileHtml;
+
+            return;
         }
 
         // DESKTOP VIEW

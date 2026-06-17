@@ -33,17 +33,7 @@ async function loadDashboard(){
 
             </div>
 
-            <div class="dashboard-card">
 
-                <h2>
-                    Total Classes
-                </h2>
-
-                <h1>
-                    ${data.total_classes}
-                </h1>
-
-            </div>
 
             <div class="dashboard-card">
 

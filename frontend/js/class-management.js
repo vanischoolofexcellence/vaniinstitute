@@ -2318,8 +2318,8 @@ async function saveAllMarks(
             Marks Saved Successfully`
         );
 
-        await fetchMarks();
-        await loadPreviousExams();
+        
+        loadPreviousExams();
 
 
     }
